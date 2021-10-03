@@ -12,7 +12,7 @@ def decimalToBinary(number:int) -> list:
 
     return remainders[::-1] #  [::-1] reverse the list
     
-def binaryToDecimal(binary):
+def binaryToDecimal(binary:list):
     binary = binary[::-1] #[::-1] reverse the list
 
     calculation = 0
@@ -27,8 +27,15 @@ def binaryToDecimal(binary):
     
     return calculation
 
-calc = decimalToBinary(1000)
+def notOperator(binary_list:list) -> list:
+    for i in range(len(binary_list)):
+        
+        # Flips the bits 
+        if binary_list[i] == 0:
+            binary_list[i] = 1
+        else:
+            binary_list[i] = 0
+        
+    return binary_list
 
-binaryToDecimal(calc)
-
-print(binaryToDecimal(calc))
+print(notOperator([1, 1, 0]))
