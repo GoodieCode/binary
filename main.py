@@ -38,4 +38,10 @@ def notOperator(binary_list:list) -> list:
         
     return binary_list
 
-print(notOperator([1, 1, 0]))
+def andOperation(a, b):
+    if a == b:
+        return a
+    else:
+        return 0
+
+print(andOperation(1, 1))
